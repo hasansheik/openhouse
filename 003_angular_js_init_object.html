@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.boxer{
+			background-color: silver;
+		}
+	</style>
+	<script src="lib/angular1.4.7.js"></script>
+</head>
+<body data-ng-app data-ng-init="myData={
+										name : 'Spring People',
+										headCount : 100,
+										is_trainingComp :  true,
+										in_Delhi : false,
+										colClass : 'boxer',
+									}" >
+	<h1 class="{{myData.colClass}}" style="width: {{myData.headCount*4}}px; height: {{myData.headCount}}px">{{myData.name}}</h1>
+</body>
+</html>

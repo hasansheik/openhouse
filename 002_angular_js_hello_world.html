@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular1.4.7.js"></script>
+</head>
+<body data-ng-app data-ng-init="myComp='My Company'; col='red'" >
+	<h1>{{myComp|uppercase}}</h1>
+	<h1>{{myComp|lowercase}}</h1>
+	<h1>{{myComp.length}}</h1>
+	<h1>{{myComp.length*2}}</h1>
+	<h1>{{myComp+' is the name of my company'}}</h1>
+	<h1 style="background-color: {{col}}">Give me red</h1>
+</body>
+</html>
