@@ -3,6 +3,17 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
+	<script src="lib/jquery.js"></script>
+	<script>
+		$(function(){
+			$("#ti1").on("change",changeIt);
+			$("#ti1").on("keyup",changeIt);
+			$("#ti1").on("keydown",changeIt);
+		});
+		function changeIt(evt){
+			$("#log").text(evt.target.value);
+		};
+	</script>
 </head>
 <body>
 	<input type="text" id="ti1" />
