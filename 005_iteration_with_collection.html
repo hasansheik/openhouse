@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular1.4.7.js"></script>
+	<!--
+		https://vijay.titanpad.com/17
+		openhouse
+	-->
+</head>
+<body data-ng-app data-ng-init="heros = [
+        {title : 'Batman', photo : 'images/batman.jpg'},
+        {title : 'Ironman', photo : 'images/ironman.jpg'},
+        {title : 'Spiderman', photo : 'images/spiderman.jpg'},
+        {title : 'Phantom', photo : 'images/phantom.jpg'},
+        {title : 'Rajani', photo : 'images/rajani.jpg'}
+]" >
+	<ul>
+		<li data-ng-repeat="hero in heros">
+			<img src="{{hero.photo}}" width="40" align="absmiddle" />
+			<lable>{{hero.title}}</lable>
+		</li>
+	</ul>
+</body>
+</html>

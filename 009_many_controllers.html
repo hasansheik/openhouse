@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Using Many Controllers</title>
+	<script src="lib/angular1.4.7.js"></script>
+	<!--
+		Modules
+	-->
+	<script src="lib/angular-route.js"></script>
+	<script src="app/module/mainMod.js"></script>
+	<!--
+		Controllers
+	-->
+	<script src="app/controller/home_controller.js"></script>
+	<script src="app/controller/batman_controller.js"></script>
+	<script src="app/controller/ironman_controller.js"></script>
+	<script src="app/controller/spiderman_controller.js"></script>
+	<script src="app/controller/rajani_controller.js"></script>
+</head>
+<body data-ng-app="app">
+	<a href="#/">Home</a>
+	<a href="#/batman">Batman</a>
+	<a href="#/ironman">Ironman</a>
+	<a href="#/spiderman">Spiderman</a>
+	<a href="#/rajani">Rajani</a>
+<div data-ng-view></div>
+</body>
+</html>

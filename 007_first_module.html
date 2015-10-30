@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="lib/angular1.4.7.js"></script>
+	<script src="app/module.js"></script>
+	<script src="app/controller.js"></script>
+	<!--script src="app/config.js"></script-->
+</head>
+<body data-ng-app="app" ng-controller="firstController">
+	<input type="text"  ng-model="myFilter"/>
+	<table>
+		<tr>
+			<th ng-click="filterFun('title')">Title</th>
+			<th ng-click="filterFun('photo')">Photo</th>
+			<th ng-click="filterFun('city')">City</th>
+			<th ng-click="filterFun('popular')">Popular</th>
+			<th ng-click="filterFun('releaseDate')">Release Date</th>
+			<th ng-click="filterFun('ticketPrice')">Price</th>
+		</tr>
+		<tr data-ng-repeat="hero in heros | orderBy : val : reverse | filter : {title : myFilter}">
+			<td>{{hero.title | uppercase}}</td>
+			<td><img src="{{hero.photo}}" width="40" align="absmiddle" /></td>
+			<td>{{hero.city}}</td>
+			<td>{{hero.popular}}</td>
+			<td>{{hero.releaseDate | date:'MM-dd-yyyy'}}</td>
+			<td>{{hero.ticketPrice | currency:'INR '}}</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
